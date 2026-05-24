@@ -1,0 +1,18 @@
+:root {
+  --cream:         #F4EDE0;
+  --bone:          #EDE4D3;
+  --oxblood:       #7A1E1E;
+  --sage:          #8A9A7B;
+  --ochre:         #C89B3C;
+  --charcoal:      #2B2B2B;
+  --charcoal-soft: #3a3735;
+  --ink:           #1a1a1a;
+  --serif: "Spectral", Georgia, serif;
+  --sans:  "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  --mono:  "IBM Plex Mono", ui-monospace, monospace;
+  --measure: 36rem;
+  --gutter: clamp(1.5rem, 5vw, 4rem);
+  --cutout-shadow:
+    drop-shadow(6px 10px 0 rgba(43,43,43,.10))
+    drop-shadow(2.4px 4px 6px rgba(43,43,43,.18));
+}

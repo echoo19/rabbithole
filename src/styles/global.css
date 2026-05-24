@@ -1,0 +1,193 @@
+/* ============================================================
+   GLOBAL — base reset, typography, and shared utilities
+   ============================================================ */
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--cream);
+  color: var(--charcoal);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  /* Subtle paper grain across entire page */
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.16  0 0 0 0 0.16  0 0 0 0 0.16  0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size: 240px 240px;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+/* ===== Typography ===== */
+h1, h2, h3, h4, .serif {
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+p { text-wrap: pretty; }
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--oxblood);
+  margin: 0 0 1.5rem 0;
+}
+.eyebrow .num {
+  display: inline-block;
+  width: 1.6rem;
+  text-align: left;
+  font-feature-settings: "tnum";
+}
+
+.kicker {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--charcoal-soft);
+  opacity: 0.7;
+}
+
+.lede {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  line-height: 1.45;
+  color: var(--charcoal);
+  font-style: italic;
+}
+
+.measure { max-width: var(--measure); }
+
+/* ===== Top progress strip ===== */
+.progress {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: rgba(43,43,43,0.08);
+  z-index: 100;
+}
+.progress__bar {
+  height: 100%;
+  background: var(--oxblood);
+  width: 0%;
+  transition: width 0.15s ease-out;
+}
+
+/* ===== Cutout silhouettes — generic styling ===== */
+.cutout {
+  filter: var(--cutout-shadow);
+}
+.cutout svg { width: 100%; height: 100%; overflow: visible; }
+
+/* paper grain overlay */
+.grain {
+  mix-blend-mode: multiply;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+/* ===== Asset slot annotation (dev/handoff aid) ===== */
+.slot-label {
+  position: absolute;
+  bottom: 0.5rem; left: 0.5rem;
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--charcoal-soft);
+  background: rgba(244,237,224,0.85);
+  padding: 0.25rem 0.5rem;
+  border: 1px dashed rgba(43,43,43,0.3);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+body.show-slots .slot-label { opacity: 1; }
+body.show-slots .cutout {
+  outline: 1px dashed rgba(122,30,30,0.4);
+  outline-offset: 4px;
+}
+
+/* ===== Scroll cue ===== */
+.scroll-cue {
+  position: absolute;
+  bottom: 2rem; left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--charcoal-soft);
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  opacity: 0.7;
+}
+.scroll-cue .line {
+  width: 1px; height: 36px;
+  background: var(--charcoal-soft);
+  animation: cueLine 2.4s ease-in-out infinite;
+  transform-origin: top;
+}
+@keyframes cueLine {
+  0%, 100% { transform: scaleY(0.2); opacity: 0.2; }
+  50%      { transform: scaleY(1);   opacity: 1; }
+}
+
+/* ===== In-page "read more" link ===== */
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 2rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--oxblood);
+  text-decoration: none;
+  padding: 0.85rem 1.2rem;
+  border: 1px solid var(--oxblood);
+  background: transparent;
+  transition: background 0.15s ease, color 0.15s ease;
+  position: relative;
+  z-index: 4;
+}
+.read-more:hover { background: var(--oxblood); color: var(--cream); }
+.read-more .arrow { transition: transform 0.2s ease; }
+.read-more:hover .arrow { transform: translateX(4px); }
+
+/* ===== Quiz progress (shared between hub quiz and quiz page) ===== */
+.quiz-progress {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 2.5rem;
+}
+.quiz-progress i {
+  flex: 1;
+  height: 3px;
+  background: rgba(43,43,43,0.12);
+  display: block;
+}
+.quiz-progress i.is-done { background: var(--oxblood); }
+.quiz-progress i.is-current {
+  background: linear-gradient(to right, var(--oxblood) 50%, rgba(43,43,43,0.12) 50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
