@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>A Rabbit Hole Down the Meat Industry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/src/styles/tokens.css"/>
+  <link rel="stylesheet" href="/src/styles/global.css"/>
+  <link rel="stylesheet" href="/src/styles/hub.css"/>
+</head>
+<body data-page="hub">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <pattern id="paperGrain" width="200" height="200" patternUnits="userSpaceOnUse">
+      <filter id="pgf"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .17 0 0 0 0 .17 0 0 0 0 .17 0 0 0 .55 0"/></filter>
+      <rect width="200" height="200" filter="url(#pgf)" opacity=".35"/>
+    </pattern>
+  </defs>
+</svg>
+
+<!-- STAGE 0: TITLE -->
+<section class="stage-title" id="stageTitle">
+  <div class="stage-title__inner">
+    <p class="stage-title__kicker">An editorial investigation</p>
+    <h1 class="stage-title__h1">A Rabbit Hole Down<br/><em>the Meat Industry</em></h1>
+    <p class="stage-title__tagline">Trace your food backward.</p>
+    <div class="stage-title__cue">
+      <span>Enter the store</span>
+      <div class="line"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STAGE 1: GROCERY AISLE -->
+<section class="stage-aisle" id="stageAisle">
+  <div class="aisle-track" id="aisleTrack" role="img" aria-label="Grocery store meat aisle illustration"></div>
+  <div class="aisle-label">What you see at the store.</div>
+</section>
+
+<!-- STAGE 2: PASTURE -->
+<section class="stage-pasture" id="stagePasture">
+  <div class="pasture-art cutout" id="pastureArt" role="img" aria-label="Peaceful pastoral scene: a steer grazing, a farmer in the distance"></div>
+  <div class="pasture-foreground">
+    <div class="pasture-foreground__brand">
+      <span>An editorial investigation</span>
+      <b>A Rabbit Hole</b>
+      <span>Issue 01 · 2026</span>
+    </div>
+    <div class="pasture-foreground__copy">
+      <h1 class="pasture-foreground__title">The pasture is real. <em>It is also the marketing.</em></h1>
+      <p class="pasture-foreground__sub">Every supermarket meat case sells you this image first. The pasture, the farmer, the wide sky. Almost none of the system that delivers a steak to a shelf actually looks like this.</p>
+    </div>
+    <div class="pasture-unveil">
+      <button class="unveil-btn" id="unveilBtn" type="button">Unveil</button>
+      <p class="unveil-btn__note">Pulls back the curtain · six investigations</p>
+      <button class="pasture-skip" id="skipBtn" type="button">Skip the unveil</button>
+    </div>
+  </div>
+</section>
+
+<!-- CURTAIN -->
+<div class="curtain" aria-hidden="true">
+  <div class="curtain__panel curtain__panel--left"><div class="curtain__title curtain__title--left">behind</div></div>
+  <div class="curtain__panel curtain__panel--right"><div class="curtain__title curtain__title--right">the curtain</div></div>
+</div>
+
+<!-- STAGE 3: HUB GRID -->
+<section class="hub-stage" id="hubStage">
+  <div class="hub-stage__meta">
+    <span>The hub · six spheres</span>
+    <span>Read in any order</span>
+    <span>Total · 51 min</span>
+  </div>
+  <div class="hub-stage__head">
+    <h2>Six spheres of the same supply chain. <em>Choose your descent.</em></h2>
+    <p>Each card opens into a self-contained chapter. Read one if it's the part that pulls; read all six and the picture is no longer ambiguous. There is no required order.</p>
+  </div>
+
+  <div class="spheres" role="list">
+    <a class="sphere sphere--labor" href="/labor.html" role="listitem">
+      <div class="sphere__num"><span class="sphere__swatch"></span>01</div>
+      <div class="sphere__dur">9 min</div>
+      <div class="sphere__art" data-art="labor" role="img" aria-label="Worker silhouette illustration"></div>
+      <div class="sphere__cap">
+        <div class="sphere__theme"><i></i>Labor ethics</div>
+        <h3 class="sphere__title">The line never stops. <em>People do.</em></h3>
+      </div>
+      <span class="sphere__arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="sphere sphere--immigrant" href="/immigrant-labor.html" role="listitem">
+      <div class="sphere__num"><span class="sphere__swatch"></span>02</div>
+      <div class="sphere__dur">8 min</div>
+      <div class="sphere__art" data-art="immigrant" role="img" aria-label="Map fragment illustration"></div>
+      <div class="sphere__cap">
+        <div class="sphere__theme"><i></i>Immigrant labor</div>
+        <h3 class="sphere__title">Half the country's beef, <em>by people not born here.</em></h3>
+      </div>
+      <span class="sphere__arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="sphere sphere--consolidation" href="/consolidation.html" role="listitem">
+      <div class="sphere__num"><span class="sphere__swatch"></span>03</div>
+      <div class="sphere__dur">10 min</div>
+      <div class="sphere__art" data-art="consolidation" role="img" aria-label="Corporate bar chart illustration"></div>
+      <div class="sphere__cap">
+        <div class="sphere__theme"><i></i>Corporate influence</div>
+        <h3 class="sphere__title">Four firms decide <em>what beef costs.</em></h3>
+      </div>
+      <span class="sphere__arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="sphere sphere--climate" href="/climate.html" role="listitem">
+      <div class="sphere__num"><span class="sphere__swatch"></span>04</div>
+      <div class="sphere__dur">7 min</div>
+      <div class="sphere__art" data-art="climate" role="img" aria-label="Climate emissions illustration"></div>
+      <div class="sphere__cap">
+        <div class="sphere__theme"><i></i>Climate change</div>
+        <h3 class="sphere__title">Fifty kilograms of CO₂ <em>per kilogram of beef.</em></h3>
+      </div>
+      <span class="sphere__arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="sphere sphere--health" href="/health.html" role="listitem">
+      <div class="sphere__num"><span class="sphere__swatch"></span>05</div>
+      <div class="sphere__dur">9 min</div>
+      <div class="sphere__art" data-art="health" role="img" aria-label="Meat package illustration"></div>
+      <div class="sphere__cap">
+        <div class="sphere__theme"><i></i>Quality &amp; health</div>
+        <h3 class="sphere__title">What's in the meat, <em>and what's not on the label.</em></h3>
+      </div>
+      <span class="sphere__arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="sphere sphere--cruelty" href="/welfare.html" role="listitem">
+      <div class="sphere__num"><span class="sphere__swatch"></span>06</div>
+      <div class="sphere__dur">8 min</div>
+      <div class="sphere__art" data-art="cruelty" role="img" aria-label="Cage bars with hen illustration"></div>
+      <div class="sphere__cap">
+        <div class="sphere__theme"><i></i>Animal cruelty</div>
+        <h3 class="sphere__title">A number, a unit, <em>a cut, a label.</em></h3>
+      </div>
+      <span class="sphere__arrow" aria-hidden="true">→</span>
+    </a>
+  </div>
+
+  <div class="hub-stage__foot">
+    <a href="#hubReflect">
+      <div class="lbl">When you're done</div>
+      <div class="ttl">A reflection <em>quiz</em> ↓</div>
+    </a>
+    <a href="/labor.html">
+      <div class="lbl">Read in order</div>
+      <div class="ttl">Start with <em>Labor</em></div>
+    </a>
+    <a href="#stagePasture" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+      <div class="lbl">↑ Back</div>
+      <div class="ttl">To the <em>pasture</em></div>
+    </a>
+  </div>
+</section>
+
+<!-- STAGE 4: QUIZ -->
+<section class="hub-reflect" id="hubReflect">
+  <div class="hub-reflect__rule">
+    <div class="hub-reflect__head">
+      <div>
+        <p class="kicker">Reflection</p>
+        <h2>What did you take <em>away?</em></h2>
+      </div>
+      <p class="hub-reflect__sub">Eight questions and two open prompts. No score — the point is to find out what landed.</p>
+    </div>
+    <div class="hub-reflect__inner">
+      <div class="hub-reflect__copy">
+        <div class="quiz-progress" id="quizProgress" aria-hidden="true"></div>
+        <p class="kicker" id="quizTitle" style="margin:1.5rem 0 .4rem">A reflection</p>
+        <p id="quizStep" style="font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--charcoal-soft);margin:0"></p>
+      </div>
+      <div class="hub-reflect__quiz" id="quizMount" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<a class="reflect-corner" id="reflectCorner" href="#hubReflect" aria-label="Jump to reflection quiz">Reflect ↘</a>
+
+<script type="module" src="/src/js/illustrations.js"></script>
+<script type="module" src="/src/js/intro.js"></script>
+<script type="module" src="/src/js/animations.js"></script>
+<script type="module" src="/src/js/quiz.js"></script>
+</body>
+</html>
