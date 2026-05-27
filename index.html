@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="/src/styles/tokens.css"/>
   <link rel="stylesheet" href="/src/styles/global.css"/>
   <link rel="stylesheet" href="/src/styles/hub.css"/>
+  <!-- Detect #hub hash before first paint so intro stages never flash -->
+  <script>if(location.hash==='#hub')document.documentElement.setAttribute('data-direct-hub','');</script>
 </head>
 <body data-page="hub">
 

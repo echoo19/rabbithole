@@ -2,7 +2,7 @@ import { initCountUp } from '../js/animations.js'
 
 export function wireContent() {
   const lede = document.getElementById('pageLede')
-  if (lede) lede.textContent = `Four companies — Tyson Foods, JBS USA, Cargill, and National Beef — control approximately 85 percent of the fed-cattle slaughter capacity in the United States, a concentration that restructured the American food system over three decades while the government watched, and sometimes helped.`
+  if (lede) lede.textContent = `Tyson Foods, JBS USA, Cargill, and National Beef control approximately 85 percent of the fed-cattle slaughter capacity in the United States, a concentration that restructured the American food system over three decades while the government watched, and sometimes helped.`
 
   const prose = document.getElementById('articleProse')
   if (prose) prose.innerHTML = `
@@ -11,6 +11,10 @@ export function wireContent() {
     <h2>Four names</h2>
     <p>The combined market share of these four companies in fed-cattle slaughter — the beef produced from animals grain-finished in feedlots, which represents the majority of retail beef in the U.S. — has been estimated by the DOJ and independent agricultural economists at approximately 82 to 85 percent, depending on the measurement period. In practical terms, this means that a rancher who raises cattle in Nebraska, Kansas, or Texas has, at most, four realistic buyers for that animal when it reaches slaughter weight. Often, because of geography and the location of packing plants, the realistic number is two or three. The competitive dynamics that result from this structure — the ability of a concentrated buyer market to suppress the prices it pays to sellers — is the central grievance of the independent cattle ranching industry, and it has been the subject of federal investigations for more than a decade.</p>
     <p>Tyson Foods alone processed approximately 28 percent of domestic beef in recent years, with revenues across its beef, pork, and poultry divisions exceeding $50 billion annually. JBS USA's revenues from its American beef and pork operations approached comparable figures. The scale is relevant not merely as a measure of size but as an explanation of political influence: companies that supply a significant fraction of the national protein supply are not regulated the way other large firms are regulated.</p>
+
+    <figure class="article-scene">
+      <img src="/assets/scenes/a4-factory-exterior.png" alt="Industrial meat processing plant exterior, paper-cut illustration" width="1536" height="1024" loading="lazy">
+    </figure>
 
     <h2>How it got this way</h2>
     <p>The consolidation of the meatpacking industry did not happen overnight, and it did not happen despite federal policy — in important respects, it happened because of it. The Packers and Stockyards Act of 1921 was designed to prevent exactly this kind of concentration, empowering the Department of Agriculture to police anticompetitive practices by meat processors. For most of the twentieth century, the Act was applied with varying degrees of rigor. Beginning in the 1980s, as deregulatory ideology reshaped federal enforcement priorities, USDA's oversight of packer concentration atrophied. A series of mergers that would have been challenged in earlier decades passed without meaningful review.</p>

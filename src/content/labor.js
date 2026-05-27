@@ -2,7 +2,7 @@ import { initCountUp } from '../js/animations.js'
 
 export function wireContent() {
   const lede = document.getElementById('pageLede')
-  if (lede) lede.textContent = `At 140 cattle per hour, the line does not pause for the body — it simply accounts for the body's failure in advance.`
+  if (lede) lede.textContent = `At 140 cattle per hour, the line does not pause for the body. It simply accounts for the body's failure in advance.`
 
   const prose = document.getElementById('articleProse')
   if (prose) prose.innerHTML = `
@@ -14,9 +14,17 @@ export function wireContent() {
 
     <blockquote>"Workers said supervisors and managers discouraging them from reporting injuries was commonplace — including through intimidation, discipline, or just being sent home without pay."<cite>— Human Rights Watch, "When We're Dead and Buried, Our Bones Will Keep Hurting," 2019</cite></blockquote>
 
+    <figure class="article-scene">
+      <img src="/assets/spots/c5-worker.png" alt="Meatpacking line worker figure, paper-cut spot illustration" width="1024" height="1024" loading="lazy">
+    </figure>
+
     <h2>The supervisor's morning</h2>
     <p>The floor of a large beef slaughter plant is organized around a single constraint: throughput. Every supervisor, every line lead, every industrial engineer who has walked that floor understands that stopping the line — even for five minutes — costs thousands of dollars in lost production. The chain moves. The workers move with it or they do not. A former line worker interviewed by GAO investigators described the calculus plainly: if you slowed to avoid an awkward cut, the animal kept moving and the cut became worse. You learned to move faster, not more carefully.</p>
     <p>OSHA's ergonomics standard, finalized in 2000 after years of rulemaking, was repealed by Congress in 2001 under industry pressure before it ever took effect. What remained were voluntary guidelines. The result is that line-speed approvals — granted by the USDA Food Safety and Inspection Service, not OSHA — have consistently outpaced the agency's ability to evaluate worker safety implications. When USDA's HIMP (HACCP-Based Inspection Models Project) pilot program allowed pork plants to increase speeds to 1,300 hogs per hour, OSHA raised concerns about worker injury rates at those facilities. The concerns were noted and the program expanded anyway.</p>
+
+    <figure class="article-scene">
+      <img src="/assets/scenes/a5-conveyor-belt.png" alt="Industrial meat processing conveyor belt, paper-cut illustration" width="1536" height="1024" loading="lazy">
+    </figure>
 
     <h2>Why it is hard to slow down</h2>
     <p>The economics of large-scale meat processing depend on volume. Slaughter facilities represent enormous fixed costs — refrigeration, wastewater treatment, USDA inspection staffing, union contracts where they exist — that do not change whether the plant runs at 80 percent capacity or 100 percent. The incentive to maximize throughput is structural, not incidental, and it operates against any individual worker's interest in a sustainable pace.</p>

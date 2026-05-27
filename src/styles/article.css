@@ -210,6 +210,17 @@
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  will-change: transform;
+}
+
+.article-scene {
+  margin: 3rem 0;
+  width: 100%;
+}
+.article-scene img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .article-figure {

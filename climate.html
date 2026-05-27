@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>The carbon on your plate — A Rabbit Hole</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/src/styles/tokens.css"/>
+  <link rel="stylesheet" href="/src/styles/global.css"/>
+  <link rel="stylesheet" href="/src/styles/article.css"/>
+</head>
+<body data-current="climate">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <pattern id="paperGrain" width="200" height="200" patternUnits="userSpaceOnUse">
+      <filter id="pgf"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .17 0 0 0 0 .17 0 0 0 0 .17 0 0 0 .55 0"/></filter>
+      <rect width="200" height="200" filter="url(#pgf)" opacity=".35"/>
+    </pattern>
+  </defs>
+</svg>
+<main class="article">
+  <header class="article-head">
+    <div>
+      <div class="article-head__meta">
+        <span class="article-head__num">04</span>
+        <span class="article-head__chapter">Climate change · Chapter four</span>
+      </div>
+      <h1>Fifty kilograms of CO₂<br/><em>per kilogram of beef.</em></h1>
+    </div>
+    <div>
+      <p class="article-head__lede" id="pageLede"></p>
+      <div class="article-head__byline">
+        <span>Reporting · <strong>Editorial Desk</strong></span>
+        <span>7 min read</span>
+      </div>
+    </div>
+  </header>
+  <div class="article-body">
+    <div class="article-prose" id="articleProse"></div>
+    <aside class="article-aside">
+      <div class="article-aside__sticky">
+        <figure class="article-figure">
+          <div class="article-figure__art cutout" id="sphereArt"
+               style="min-height:320px;background:var(--bone);"
+               role="img" aria-label="Smokestacks and emissions illustration"></div>
+        </figure>
+        <div id="factCards"></div>
+      </div>
+    </aside>
+  </div>
+  <div class="article-stats" id="articleStats"></div>
+  <blockquote class="article-pull" id="articlePull"></blockquote>
+  <p class="kicker" id="sourcesLine" style="text-align:center;margin-top:4rem"></p>
+  <section id="resourcesSection" style="max-width:var(--measure);margin:3rem auto 0"></section>
+  <footer class="article-foot">
+    <a href="/index.html#hub">
+      <div class="article-foot__dir">← Back to</div>
+      <div class="article-foot__title">The six spheres</div>
+    </a>
+    <a href="/health.html" class="article-foot__next">
+      <div class="article-foot__dir">Chapter 05 →</div>
+      <div class="article-foot__title">What's in the meat</div>
+    </a>
+  </footer>
+</main>
+<script type="module" src="/src/js/nav.js"></script>
+<script type="module" src="/src/js/illustrations.js"></script>
+<script type="module" src="/src/js/animations.js"></script>
+<script type="module">
+  import { wireContent } from '/src/content/climate.js'
+  wireContent()
+</script>
+</body>
+</html>

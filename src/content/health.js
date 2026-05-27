@@ -2,7 +2,7 @@ import { initCountUp } from '../js/animations.js'
 
 export function wireContent() {
   const lede = document.getElementById('pageLede')
-  if (lede) lede.textContent = `When the World Health Organization's cancer research arm classified processed meat as a Group 1 carcinogen in 2015, it placed bacon and hot dogs in the same evidence category as tobacco — not because the risks are equivalent, but because the scientific evidence that they cause cancer is equally certain.`
+  if (lede) lede.textContent = `When the World Health Organization's cancer research arm classified processed meat as a Group 1 carcinogen in 2015, it placed bacon and hot dogs in the same evidence category as tobacco, not because the risks are equivalent but because the scientific evidence that they cause cancer is equally certain.`
 
   const prose = document.getElementById('articleProse')
   if (prose) prose.innerHTML = `
@@ -13,6 +13,10 @@ export function wireContent() {
     <p>The industry's response to the 2015 classification was swift and well-funded. The North American Meat Institute commissioned a rapid rebuttal and held press conferences within hours of the IARC announcement. Several processed meat companies issued statements emphasizing the distinction between correlation and causation. A number of nutrition scientists — some with disclosed industry funding — questioned the methodology of the review. What the rebuttals did not change was the underlying epidemiological literature, which has since accumulated further evidence broadly consistent with the 2015 findings. The American Cancer Society's dietary guidelines, updated in 2020, specifically recommend limiting red and processed meat consumption based on the same body of evidence IARC reviewed.</p>
 
     <blockquote>"The data confirm the link between processed meat and colorectal cancer. Eating 50 grams of processed meat every day — about two slices of bacon or one hot dog — increases the risk of colorectal cancer by 18 percent."<cite>— IARC Director Christopher Wild, Monograph Volume 114 press release, October 2015</cite></blockquote>
+
+    <figure class="article-scene">
+      <img src="/assets/scenes/a6-grocery-shelf.png" alt="Single grocery shelf with 12 identical meat packages, paper-cut illustration" width="1536" height="1024" loading="lazy">
+    </figure>
 
     <h2>What's in the drug supply</h2>
     <p>The antibiotic question is distinct from the carcinogenicity question, but it is arguably more consequential for public health at scale. The FDA's 2022 Annual Summary Report on Antimicrobials Sold or Distributed for Use in Food-Producing Animals — published under the Animal Drug User Fee Amendments Act (ADUFA) — found that approximately 70 percent of medically important antibiotics sold in the United States were sold for use in livestock, not human medicine. "Medically important" is a regulatory category designating antibiotics that are also used to treat human infections, meaning that their use in animals creates selection pressure for resistant bacteria that can then spread to humans through direct contact, environmental pathways, or the food supply itself.</p>

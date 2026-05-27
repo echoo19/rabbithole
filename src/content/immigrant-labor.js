@@ -2,7 +2,7 @@ import { initCountUp } from '../js/animations.js'
 
 export function wireContent() {
   const lede = document.getElementById('pageLede')
-  if (lede) lede.textContent = `Roughly half of everyone who cuts, trims, and packages the meat Americans eat was born in another country — a workforce whose precarity is not incidental to the industry's cost structure, but central to it.`
+  if (lede) lede.textContent = `Roughly half of everyone who cuts, trims, and packages the meat Americans eat was born in another country, a workforce whose precarity is not incidental to the industry's cost structure but central to it.`
 
   const prose = document.getElementById('articleProse')
   if (prose) prose.innerHTML = `
@@ -12,11 +12,19 @@ export function wireContent() {
     <p>The foreign-born workers in meatpacking plants are not a monolith. They include legal permanent residents, naturalized citizens, refugees admitted under federal resettlement programs, holders of temporary work visas, and a substantial population of undocumented workers whose presence the industry has long tolerated because it suppresses wages and inhibits organizing. Pew Research Center estimates that approximately 37 percent of workers in meatpacking and poultry processing may be undocumented — a figure that carries significant methodological uncertainty but is consistent with plant-level studies and enforcement records.</p>
     <p>The geographic clustering is pronounced. Garden City, Kansas, and Lexington, Nebraska, transformed over roughly two decades from majority-white agricultural towns into some of the most ethnically diverse small cities in the Great Plains, their demographics driven almost entirely by the labor needs of nearby beef and pork slaughter facilities. Storm Lake, Iowa, a town of fewer than 15,000, has a public school district where students speak more than 20 languages, a direct consequence of recruiting pipelines that connected Burmese, Guatemalan, Somali, and Mexican communities to plant jobs that no other sector of the local economy was generating.</p>
 
+    <figure class="article-scene">
+      <img src="/assets/spots/c1-beef-cattle.png" alt="Beef steer side-profile, paper-cut spot illustration" width="1024" height="1024" loading="lazy">
+    </figure>
+
     <h2>How they got there</h2>
     <p>The recruitment networks that bring immigrant workers to meatpacking plants are rarely operated by the companies themselves. Processors have historically maintained arm's-length relationships with labor contractors and recruiters who handle the actual work of sourcing employees — an arrangement that has, in some cases, insulated companies from legal liability when those workers turned out to be undocumented. A 1999 investigation by the Immigration and Naturalization Service found that several large poultry processors had knowingly used subcontractors who recruited undocumented workers; the companies faced civil fines but no criminal prosecution, and the practice continued in modified form.</p>
     <p>Many refugee workers arrive through formal resettlement channels, connected to plant jobs by resettlement agencies that have contractual relationships with food companies. The Department of Labor's Wage and Hour Division has documented recurring patterns of wage theft in this segment of the workforce — workers whose pay stubs reflect time paid at the legal rate while their actual hours, including donning and doffing time, cleaning time, and mandatory pre-shift meetings, go uncompensated. A 2015 WHD enforcement action against a Midwest poultry processor found that workers had been systematically shorted for off-the-clock work over a period of several years, resulting in a $3.8 million back-wage settlement — a figure that represented a fraction of the estimated total underpayment.</p>
 
     <blockquote>"Workers in the poultry and meat industries are among the most vulnerable in our workforce. Language barriers, immigration status, and the fear of job loss make it difficult for them to report violations or claim the wages they've earned."<cite>— U.S. Department of Labor, Wage and Hour Division, enforcement statement, 2016</cite></blockquote>
+
+    <figure class="article-scene">
+      <img src="/assets/spots/d1-us-map.png" alt="US map with meatpacking plant locations and migration arrows, paper-cut illustration" width="1024" height="1024" loading="lazy">
+    </figure>
 
     <h2>The raids</h2>
     <p>On August 7, 2019, Immigration and Customs Enforcement agents simultaneously raided seven poultry processing plants across Mississippi, arresting 680 workers in the largest single-state worksite enforcement action in American history. The plants were owned by Koch Foods, Peco Foods, and several smaller processors. The workers arrested were predominantly from Guatemala and Mexico. Many had lived in Mississippi for years, had children enrolled in local schools, and had been paying taxes through individual taxpayer identification numbers.</p>
